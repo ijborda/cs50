@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: When sorting random50000.txt and sorted50000.txt, sort1 has different running times. This means that sort1 has different omega and big 0, so it is bubble sort.
+
+sort2 uses: merge sort
+
+How do you know?: When sorting random50000.txt and sorted50000.txt, sort2 has almost the same running time in both cases. This means that sort2 has the same omega and big 0. Also, sort2 was the fastest among three sorts, so it is merge sort.
+
+sort3 uses: selection sort
+
+How do you know?: When sorting random50000.txt and sorted50000.txt, sort3 has almost the same running time in both cases. This means that sort3 has the same omega and big 0. But sort3 was not the fastest among three sorts, so it is selection sort.

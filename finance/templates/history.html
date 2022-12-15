@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  History!
+{% endblock %}
+
+{% block main %}
+  <div>
+    <h2>Transaction History</h2>
+  </div>
+  <div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Action</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Number of Shares</th>
+                <th scope="col">Price Per Share during Purchase</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in history %}
+            <tr>
+              <th scope="row">{{ record["action"] }}</th>
+              <td>{{ record["symbol"]}}</td>
+              <td>{{ record["amount"] }}</td>
+              <td>{{ record["price_per_share"] }}</td>
+              <td>{{ record["total_price"] }}</td>
+              <td>{{ record["date"] }}</td>
+            <tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+{% endblock %}

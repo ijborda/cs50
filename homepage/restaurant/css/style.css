@@ -1,0 +1,530 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Prevent white space on the right side to appear when screensize is small */
+html, body {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     overflow-x: hidden;
+}
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* Set default font style */
+body {
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     color: rgb(62, 62, 72);
+}
+/* Set left and right margins */
+.container {
+     width: 88vw;
+     margin: 0 auto;
+}
+/* Remove link styles */
+a {
+     text-decoration: none;
+     color: rgb(38, 38, 43);
+}
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+/*************
+/* REUSABLES
+/*************/
+
+.background {
+     /* Set space on top and bottom of content */
+     padding-top: 5%;
+     padding-bottom: 8%;
+}
+.section-title {
+     /* Set typography */
+     color: black;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: 5rem;
+     /* Set spacings */
+     margin: 2% 0;
+}
+.secondary-title {
+     /* Make font smaller */
+     font-size: 3.5rem;
+     /* Make more margin below */
+     margin-bottom: 4%;
+}
+.tag {
+     /* Set typography */
+     color:rgb(239, 142, 52)
+}
+.button {
+     /* Set button to have the same size as input, but a bit wider */
+     padding: 1% 2%;
+     /* Remove border */
+     border: 2px solid rgb(239, 142, 52);
+     /* Set colors */
+     background: rgb(239, 142, 52);
+     color: white;
+}
+
+/********************
+/* HERO PAGE
+/********************/
+
+.nav-list {
+     /* Remove list padding and margin */
+     padding: 0;
+     margin: 0;
+     /* Push nav to the right */
+     text-align: end;
+}
+.hero {
+     /* Set background image */
+     background: url("../assets/FLSAh1LXoAE-EBs.jpeg");
+     background-size: cover;
+     padding-top: 0;
+}
+.nav-list li {
+     /* Remove bullets in list */
+     display: inline-block;
+     /* Set spacing between and around nav lists */
+     padding: 1.5% 0 1.5% 2.5%;
+     /* Set typography */
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: .9rem;
+}
+.nav-list li:first-child {
+     /* Hide hamburger */
+     display: none;
+}
+.welcome {
+     /* Push a bit below the content */
+     margin-top: 8%;
+}
+.search {
+     /* Set font size */
+     font-size: .7rem;
+     /* Set margin */
+     margin: 2% 0;
+}
+.search input {
+     /* Set size */
+     width: 30%;
+     /* Set padding */
+     padding: 1% 0 1% 1%;
+     /* Set border to rounded gray */
+     border: 2px solid rgb(219, 219, 231);
+     border-radius: .5rem 0 0 .5rem;
+}
+.search input::placeholder {
+     /* Set placeholder color */
+     color: rgb(163, 163, 177);
+}
+.search button {
+     /* Set rounder corners */
+     border-radius: 0 .5rem .5rem 0;
+}
+.socials-list {
+     /* Remove list padding and margin */
+     padding: 0;
+     margin: 0;
+}
+.socials-list li {
+     /* Remove bullets in list */
+     display: inline-block;
+     /* Set spacing between socials lists */
+     padding-right: 2.5%;
+     /* Set typography */
+     font-weight: 400;
+     font-size: .9rem;
+}
+.socials-list i {
+     /* Set icons to orange */
+     color: rgb(239, 142, 52);
+}
+
+/********************
+/* SPECIALTY PAGE
+/********************/
+
+.about-us {
+     /* Set background */
+     background: url(../assets/section-2.png);
+     background-size: cover;
+}
+.about-us-content {
+     /* Give left padding */
+     padding-left: 35%;
+     /* Give right padding */
+     padding-right: 8%;
+}
+.about-us-content p {
+     /* Set typography */
+     font-size: .8rem;
+     line-height: 1.5rem;
+     text-align: justify;
+     /* Give space below each paragraphs */
+     margin-bottom: 4%;
+}
+.about-us-content a {
+     /* Set rounder corners */
+     border-radius: .5rem 0 0 .5rem;
+     /* Set fontsize */
+     font-size: .7rem;
+     /* Increase padding */
+     padding: 2%;
+}
+.about-us-content button {
+     /* Set rounder corners */
+     border-radius: 0 .5rem .5rem 0;
+     background: rgb(244, 174, 95);
+     border: 2px solid rgb(244, 174, 95);
+     /* Set fontsize */
+     font-size: .75rem;
+     /* Increase padding */
+     padding: 2%;
+}
+
+/********************
+/* CUISINE PAGE
+/********************/
+
+.specialty {
+     /* Set background color */
+     background: rgb(243, 246, 247);
+     /* Center elements */
+     text-align: center;
+}
+.specialty ul {
+     /* Remove list padding and margin */
+     padding: 0;
+     margin: 0 auto;
+     /* Give border on bottom */
+     border-bottom: 2px solid rgb(182, 182, 191);
+     /* Set width */
+     width: 40%;
+}
+.specialty li {
+     /* Remove bullets in list */
+     display: inline-block;
+     /* Set spacing between socials lists */
+     padding: 0 2.5% 1.3% 2.5%;
+     /* Set typography */
+     font-weight: 400;
+     font-size: .9rem;
+}
+.cuisine-picture-container-group {
+     padding: 2.5rem 6.5rem 0  6.5rem;
+     /* Set layout */
+     display: flex;
+     flex-wrap: wrap;
+     /* Space between images */
+     gap: 1rem;
+     /* Center elements */
+     justify-content: center;
+}
+.cuisine-picture-container img {
+     /* Set size of images */
+     width: 15rem;
+     height: 20rem;
+    
+}
+
+/********************
+/* OPENING-HOURS PAGE
+/********************/
+
+.opening-hours {
+     /* Set background */
+     background: url(../assets/store-hours-background.png);
+}
+.opening-hours-content {
+     /* Center elements */
+     text-align: center;
+}
+.opening-hours-content h5 {
+     /* Decrease bottom margin */
+     margin-bottom: .5rem;
+}
+.opening-hours-content p {
+     /* Decrease top margin */
+     margin-top: .5rem;
+}
+.opening-hours p {
+     /* Set typography */
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: 1.5rem;
+     font-weight: bold;
+}
+.store-telephone i, .store-telephone p {
+     /* Set to orange */
+     color: rgb(239, 142, 52);
+}
+.store-telephone i {
+     /* Make telephone logo bigger */
+     font-size: 2rem;
+}
+.store-hours section {
+     /* Layout */
+     float: left;
+     width: 50%;
+}
+.promo-video iframe {
+     /* Set width */
+     width: 60%;
+     /* Set upper margin */
+     margin-top: 2%;
+}
+
+/********************
+/* REVIEW PAGE
+/********************/
+
+.reviews {
+     /* Set background */
+     background: rgb(255, 255, 255);
+}
+.reviews-content {
+     /* Center content */
+     text-align: center;
+}
+.comment img {
+     /* Resive image */
+     width: 8%;
+}
+.comment h5 {
+     /* Make name larger */
+     font-size: 1.5rem;
+     font-weight: 100;
+     /* Set margin */
+     margin: 1% 0 0 0;
+}
+.comment span {
+     /* Make position smaller */
+     font-size: .9rem;
+     /* Set color to gray */
+     color: rgb(128, 128, 136);
+     /* Give bottom margin */
+     display: inline-block;
+     margin-bottom: 1.5%;
+}
+.comment div {
+     color:rgb(221, 191, 23);
+}
+.comment p {
+     /* Increase size and spacing*/
+     font-size: 1.1rem;
+     line-height: 2rem;
+     /* Make it italic */
+     font-style: italic;
+     /* Give padding */
+     padding: 0 15%;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media screen and (max-width: 1200px) {
+     .promo-video iframe {
+          /* Make width of promo video larger */
+          width: 80%;
+     }
+}
+
+@media screen and (max-width: 1148px) {
+     .about-us-content {
+          /* Remove right padding in about-us content */
+          padding-right: 0;
+     }
+}
+
+@media screen and (max-width: 1075px) {
+     .specialty ul {
+          /* Make width of specialy list wider */
+          width: 60%;
+     }
+     .container {
+          /* Make margin smaller */
+          width: 95vw;
+     }
+     .welcome h1 {
+          /* Make h1 font smaller */
+          font-size: 4rem;
+     }
+     .welcome {
+          /* Give hero page padding-left */
+          padding-left: 5%;
+     }
+}
+
+
+@media screen and (max-width: 1000px) {
+     .about-us {
+          /* Fade background of about-us */
+          background: url(../assets/section-2-fade.png);
+          background-size: cover;  
+     }
+     .about-us-content {
+          /* Center element */
+          text-align: center;
+          /* Give left padding */
+          padding-left: 0;
+          /* Make font color black */
+          color: black;
+     }
+     .about-us-content p, .about-us-content h2 {
+          /* Give padding */
+          padding-left: 15%;
+          padding-right: 15%;
+     }
+}
+
+@media screen and (max-width: 800px) {
+     .promo-video iframe {
+          /* Set width */
+          height: 21rem;
+     }
+     .welcome h1 {
+          /* Make h1 font smaller */
+          font-size: 3rem;
+     }
+     .secondary-title {
+          /* Make h2 font smaller */
+          font-size: 2rem;
+     }
+     html {
+          /* Reduce overall font size */
+          font-size: 90%;
+     }
+}
+
+@media screen and (max-width: 800px) {
+     .specialty ul {
+          /* Make width of specialy list wider */
+          width: 70%;
+     }
+     .store-hours section {
+          /* Remove floar in storehours */
+          float: none;
+          width: 100%;
+     }
+}
+
+@media screen and (max-width: 700px) {
+     .comment h5 {
+          /* Make name larger */
+          font-size: 1rem;
+     }
+     .comment span {
+          /* Make position smaller */
+          font-size: .6rem;
+     }
+     .comment p {
+          /* Increase size and spacing*/
+          font-size: .8rem;
+          line-height: 1.5rem;
+     }
+}
+
+@media screen and (max-width: 600px) {
+     html {
+          /* Reduce overall font size */
+          font-size: 80%;
+     }
+     .specialty ul {
+          /* Make width of specialy list wider */
+          width: 80%;
+     }
+     .nav-list li {
+          /* Display hamburger and hide other list */
+          display: none;
+          /* Set spacing */
+          padding: 0;
+          margin-left: 5%;
+          padding-top: 2%;
+     }
+     .nav-list li:first-child {
+          /* Display hamburger and hide other list */
+          display: inline-block;
+     }
+     .nav-list i {
+          /* Set color */
+          color: rgb(239, 142, 52);
+          /* Make it a bit larger */
+          font-size: 1.2rem;
+     }
+     .nav-list {
+          /* Push to the left */
+          text-align: start;
+     }
+     .hero {
+          /* Fade background of about-us */
+          background: url(../assets/hero-fade.png);
+          background-size: cover;  
+     }
+     .search input {
+          /* Make search wider */
+          width: 50%;
+     }
+     .about-us-content p, .about-us-content h2 {
+          /* Lessen padding in welcome */
+          padding-left: 5%;
+          padding-right: 5%;
+     }
+     .welcome h1 {
+          /* Increase padding between elements around search */
+          padding-bottom: 2%; 
+     }
+     .welcome ul {
+          /* Increase padding between elements around search */
+          padding-top: 2%; 
+     }
+     .specialty ul {
+          /* Increase padding between elements around cuisine list */
+          padding-top: 2%; 
+     }
+}
+
+@media screen and (max-width: 500px) {
+     .welcome h1 {
+          /* Make h1 font smaller */
+          font-size: 2.5rem;
+     }
+     .welcome h1 {
+          /* Increase padding between elements around search */
+          padding-bottom: 4%; 
+     }
+     .welcome ul {
+          /* Increase padding between elements around search */
+          padding-top: 4%; 
+     }
+}
+
+@media screen and (max-width: 400px) {
+     .specialty ul {
+          /* Make width of specialy list wider */
+          width: 90%;
+     }
+}

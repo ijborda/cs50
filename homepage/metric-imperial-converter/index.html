@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Converter</title>
+		<!-- Fontawesome Link -->
+		<script src="https://kit.fontawesome.com/41ed2c6bc1.js" crossorigin="anonymous"></script>
+
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="modeToggle">
+			<i id="modeButton" class="buttonLight fa-solid fa-sun"></i>
+		</div>
+		<section class="converter">
+			<section class="inputBox">
+				<h1>Metric/Imperial unit conversion</h1>
+				<input id="input" type="text" placeholder="0">
+				<p class="warn">Invalid input</p>
+			</section>
+			<section class="resultBox light" id="resultBox">
+				<section class="result">
+					<h2 class="resultTitle h2light">Length (Meter/Feet)</h2>
+					<p class="resultValue plight" id="lengthResult">20 meters = 65.616 feet | 20 feet = 6.096 meters</p>
+				</section>
+				<section class="result">
+					<h2 class="resultTitle h2light">Volume (Liters/Gallons)</h2>
+					<p class="resultValue plight" id="volumeResult">20 liters = 5.284 gallons | 20 gallons = 75.708 liters</p>
+				</section>
+				<section class="result">
+					<h2 class="resultTitle h2light">Mass (Kilograms/Pounds)</h2>
+					<p class="resultValue plight" id="massResult">20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos</p>
+				</section>
+			</section>
+		</section>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

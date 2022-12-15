@@ -1,0 +1,143 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Prevent white space on the right side to appear when screensize is small */
+html, body {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     overflow-x: hidden;
+}
+
+/* Font size */
+html {
+     font-size: 62.5%;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     font-family: 'Roboto', sans-serif; 
+     color: white;
+     background: rgb(28, 28, 28);
+}
+
+h2 {
+     margin: 0;
+     font-weight: 500;
+     font-size: 1.5rem;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body {
+     display: flex;
+     flex-direction: column;
+     padding: 1rem;
+     align-items: center;
+}
+.converter {
+     flex-shrink: 1;
+     max-width: 500px;
+     margin: 0 auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 2rem;
+     border-radius: 20px;
+     overflow: hidden;
+}
+.inputBox, .resultBox, .result {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.inputBox {
+     background: linear-gradient(246.26deg, #585DFE 0%, #FB3796 100%);
+     width: 100%;
+     padding: 4rem 1rem;
+}
+.resultBox {
+     background: #1F2937;
+     width: 100%;
+     padding: 2rem 1rem;
+}
+input {
+     border: none;
+     width: 100%;
+     height: 5rem;
+     background: transparent;
+     text-align: center;
+     caret-color: white;
+     font-size: 5rem;
+     margin: 1rem 0;
+     color: white;
+     font-weight: bold;
+}
+p {
+     color: #D2D2D2;
+     font-size: 1.2rem;
+}
+.result {
+     margin: 1.2rem 0;
+}
+input::placeholder {
+     color: white;
+}
+input:focus {
+     outline: none;
+} 
+input:focus::placeholder {
+     color: transparent;
+}
+.modeToggle {
+     margin-top: 3rem;
+     color: rgb(182, 182, 182);
+     font-size: 4rem;
+}
+.light {
+     background: #FBF7EE;
+}
+.h2light {
+     color: #1A1921;
+}
+.plight {
+     color: #4E4E4E;
+}
+.buttonLight {
+     color: white;
+}
+.warn {
+     color: white;
+     background: red;
+     padding: 5px 0;
+     width: 50%;
+     text-align: center;
+     display: none;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

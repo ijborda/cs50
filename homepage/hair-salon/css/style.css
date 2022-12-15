@@ -1,0 +1,464 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Prevent white space on the right side to appear when screensize is small */
+html, body {
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     padding: 0px;
+     overflow-x: hidden;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+.container {
+     /* Set margin */
+     width: 90vw;
+     margin: 0 auto;
+     /* Set padding */
+     padding: 5%;
+}
+a {
+     /* Remove link styles */
+     text-decoration: none;
+}
+html {
+     /* Set default color and font family */
+     color: rgb(20, 20, 20);
+     font-family: 'Lora', serif;
+}
+.button {
+     /* Make inline block */
+     display: inline-block;
+     /* Make font smaller */
+     font-size: .8rem;
+     /* Set background */
+     background: black;
+     /* Set color */
+     color: white;
+}
+.text {
+     /* Typography */
+     font-size: .8rem;
+     line-height: 1.5rem;
+}
+
+/******************************************
+/* MODULES
+/*******************************************/
+
+/*******************
+/* NAVBAR
+/*******************/
+
+nav.container {
+     /* Layout */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     /* Set background color */
+     background: rgb(255, 255, 255);
+     /* Set nav padding */
+     padding: .7% 0;
+}
+.nav-center {
+     /* Remove list padding */
+     padding: 0;
+     /* Layout */
+     display: flex;
+     justify-content: space-around;
+     gap: 15%;
+     /* Remove bullets */
+     list-style-type: none;
+}
+.nav-center li {
+     /* Typography */
+     color: rgb(20, 20, 20);
+     font-size: .8rem;
+}
+.nav-left {
+     /* Typography */
+     font-family: 'Dancing Script', cursive;
+     font-size: 1.5rem;
+     color: rgb(20, 20, 20);
+     font-weight: bold;
+}
+.nav-right {
+     /* Typography */
+     color: rgb(20, 20, 20);
+     font-size: .8rem;
+}
+
+.nav-center a {
+     /* Set color */
+     color: rgb(20, 20, 20);
+}
+.hamburger {
+     /* Hide hamburger */
+     display: none;
+}
+
+/*******************
+/* HERO PAGE
+/*******************/
+
+.hero {
+     /* Set background */
+     background: url(../assets/hero-background.jpeg);
+     background-size: cover;
+}
+.hero-content {
+     /* Set font style to white */
+     color: white;
+     /* Set width */
+     padding-right: 50%;
+}
+.hero-content h1 {
+     /* Make h1 larger */
+     font-size: 5rem;
+     /* Remove bottom margin */
+     margin-bottom: 0;
+}
+.hero-content p {
+     /* Give space on top or below */
+     margin: 7% 0;
+}
+.hero-content a {
+     /* Resize button */
+     padding: 3% 5%;
+}
+
+/*******************
+/* SEVICES PAGE
+/*******************/
+
+.services {
+     /* Set background */
+     background: rgb(255, 255, 255);
+}
+.services-content {
+     /* Layout */
+     display: flex;
+     justify-content: space-evenly;
+     column-gap: 5%;
+     flex-wrap: wrap;
+     /* Center elements */
+     text-align: center;
+}
+.services-content section {
+     /* Set width of elements */
+     width: 340px;
+     /* Set margin bottom */
+     margin-bottom: 2%;
+}
+.services-content img {
+     /* Adjust image size */
+     width: 20%;
+}
+
+/*******************
+/* MOMENTUM PAGE
+/*******************/
+
+.momentum {
+     /* Set background */
+     background: rgb(244, 244, 246);
+}
+.momentum-content {
+     /* Layout */
+     display: flex;
+     justify-content: space-between;
+     column-gap: 10%;
+}
+.momentum-content img {
+     /* Adjust image width */
+     width: 500px;
+}
+.momentum-content div:last-child {
+     /* Adjust image width */
+     flex-shrink: .5;
+}
+.momentum-content h2 {
+     /* Increase section heading */
+     font-size: 3rem;
+     /* Remove top margin */
+     margin: 0;
+}
+.momentum p {
+     /* Give margin */
+     margin: 4% 0;
+}
+.momentum a {
+     /* Increase button padding */
+     padding: 2.5% 4%;
+}
+
+/*******************
+/* CREW PAGE
+/*******************/
+
+.crew {
+     /* Set background */
+     background: rgb(255, 255, 255);
+}
+.crew-content {
+     /* Layout of crews */
+     display: flex;
+     justify-content: space-around;
+     column-gap: 2%;
+     flex-wrap: wrap;
+}
+.crew-content section {
+     width: 300px;
+     /* Layout per crew*/
+     display: flex;
+     flex-direction: column;
+     /* Give lower margin */
+     margin-bottom: 2%;
+}
+.crew-img {
+     max-height: 100%;
+     min-width: 100%;
+     object-fit: cover;
+}
+.crew-name {
+     /* Center crew names */
+     text-align: center;
+     /* Set colors */
+     color: white;
+     background: black;
+     /* Set spacings */
+     padding: 5%;
+     width: 80%;
+     margin: 0 auto;
+     margin-top: -10%;
+}
+.crew-name h3 {
+     /* Set margins */
+     margin: 0;
+     margin-bottom: 2%;
+     /* Typography */
+     font-size: .9rem;
+     letter-spacing: .1rem;
+}
+.crew-name span {
+     /* Typography */
+     font-size: .7rem;
+}
+
+/*******************
+/* LOOK PAGE
+/*******************/
+
+.look {
+     /* Set background */
+     background: rgb(255, 255, 255);
+}
+.look-content h2 {
+     /* Increase section heading */
+     font-size: 2rem;
+     /* Remove top margin */
+     margin: 0;
+     /* Align center */
+     text-align: center;
+     /* Set to block */
+     display: block;
+     /* Set margin below */
+     margin-bottom: 5%;
+}
+ .look-content h2::after {
+      /* Set small bottom border */
+     display: block;
+     clear: both;
+     content: "";
+     position: relative;
+     left: 0;
+     bottom: 0;
+     max-width:250px;
+     height: 1px;
+     width: 2%; 
+     border-bottom: 3px solid black;
+     margin: 0 auto;
+     padding: .8% 0px;
+ }
+
+.look-img {
+     /* Layout of the three columns */
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+     flex-wrap: wrap;
+}
+.look-img div {
+     /* Layout per column */
+     width: 300px;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+.look-img img {
+     max-height: 100%;
+     min-width: 100%;
+}
+
+/*******************
+/* PROMO PAGE
+/*******************/
+
+.promo-content {
+     /* Layout */
+     display: flex;
+     justify-content: space-between;
+     /* Set background */
+     background: rgb(240, 238, 239);
+     background-clip: content-box;
+}
+.promo-text {
+     /* Set padding on text */
+     padding: 5% 0 5% 5%;
+     /*  */
+} 
+.promo-img img {
+     /* Adjust image width */
+     width: 300px;
+}
+.promo-content h2 {
+     /* Increase section heading */
+     font-size: 3rem;
+     /* Remove top margin */
+     margin: 4% 0;
+     /* Reduce weight */
+     font-weight: 100;
+}
+.promo-content span {
+     /* Give margin */
+     display: block;
+}
+.promo-content strong {
+     /* Make strong bold */
+     font-weight: bold;
+}
+.promo-content a {
+     /* Increase button padding */
+     padding: 2.5% 4%;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media screen and (max-width:1200px) {
+     .momentum-content img {
+          /* Adjust image width */
+          width: 400px;
+     }
+}
+@media screen and (max-width: 1100px) {
+     /* Show hamburger and hide other list */
+     .nav-center li {
+          display: none;
+     }
+     li.hamburger {
+          display: inline-block;
+     }
+}
+
+@media screen and (max-width: 1000px) {
+     .container {
+          /* Reduce container margin */
+          width: 95vw;
+          /* Set padding */
+          padding: 8% 2%;
+     }
+     /* Add nav padding */
+     nav.container {
+          padding-left: 2%;
+          padding-right: 2%; 
+     }
+     /* Modify hero page */
+     .hero h1 {
+          margin-top: 2%;
+     }
+     .hero p {
+          margin: 5% 0;
+     }
+     .hero {
+          background: url(../assets/hero-background-fade.png);
+          background-size: cover;
+          
+     }
+}
+@media screen and (max-width: 800px) {
+     .container {
+          /* Set padding */
+          padding: 10% 2%;
+     }
+     /* Modify momentum page */
+     .momentum-content {
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+     }
+     .momentum-content img {
+          margin-top: 5%;
+     }
+     .momentum p {
+          padding: 0 5%;
+     }
+}
+@media screen and (max-width: 650px) {
+     .promo-img {
+          /* Remove promo image */
+          display: none;
+     }
+     /* Adjust momentum sizes */
+     .momentum h2 {
+          font-size: 2rem;
+     }
+     .momentum p {
+          font-size: .7rem;
+     }
+     .momentum img {
+          width: 300px;
+     }
+    
+     .promo-text {
+           /* Adjust promo padding */
+          padding: 10%;
+          /* Center */
+          text-align: center;
+     } 
+     .promo h2 {
+          /* Adjust promo sizes */
+          font-size: 1.7rem;
+     }
+}
+@media screen and (max-width: 500px) {
+     .container {
+          /* Set padding */
+          padding: 15% 2%;
+     }
+     .hero h1 {
+          /* Make h1 font size smaller */
+          font-size: 3rem;
+     }
+}

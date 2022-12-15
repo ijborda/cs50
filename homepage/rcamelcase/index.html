@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>R Column Names to CamelCase</title>
+		
+		<!-- Google font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+		
+		<!-- SocMed Previews -->
+		<!-- Primary Meta Tags -->
+		<meta name="title" content="R Column Names to CamelCase">
+		<meta name="description" content="Tool to clean and convert raw column names into R-ready vector formatted in camelCase. Built using HTML, CSS, and JavaScript.">
+		<meta name="image" property="og:image" content="https://github.com/ijborda/ijborda.github.io/blob/main/rcamelcase/rcamelcase.png?raw=true">
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://metatags.io/">
+		<meta property="og:title" content="R Column Names to CamelCase">
+		<meta property="og:description" content="Tool to clean and convert raw column names into R-ready vector formatted in camelCase. Built using HTML, CSS, and JavaScript.">
+		<meta property="og:image" content="rcamelcase/rcamelcase.png">
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://metatags.io/">
+		<meta property="twitter:title" content="R Column Names to CamelCase">
+		<meta property="twitter:description" content="Tool to clean and convert raw column names into R-ready vector formatted in camelCase. Built using HTML, CSS, and JavaScript.">
+		<meta property="twitter:image:src" content="https://github.com/ijborda/ijborda.github.io/blob/main/rcamelcase/rcamelcase.png?raw=true">
+
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="outerContainer">
+			<div class="container">
+				<h1>Convert column names to camelCase for R</h1>
+				<form class="input">
+					<textarea id="inputEl"></textarea>
+					<p id="numColnamesEl">Number of columns: 0</p>
+					<input type="submit">
+				</form>
+				<section class="output">
+					<p id="outputEl">Result goes here</p>
+					<button id="copyText">Copy text</button>
+				</section>
+				<section class="instruction">
+					<h2>How to Use?</h2>
+					<ol>
+						<li>Enter column names in the box above. Each line corresponds to one column name.</li>
+						<li>The number of column names entered so far is shown below the box.</li>
+						<li>Click "Submit" to convert the column names to R ready vector formatted in camelCase.</li>
+						<li>Click "Copy Text" to copy the output to your clipboard.</li>
+					</ol>
+					<h2>How does it work?</h2>
+					<ol>
+						<li>It starts by removing all non-alphanumeric characters.</li>
+						<li>White spaces before and after each column names are also stripped.</li>
+						<li>The first character of every word (except the first word) is set to uppercase, all other characters are set to lowercase.</li>
+						<li>It assumes that words are separated by either space or underscore.</li>
+						<li>All white spaces are then removed.</li>
+						<li>Finally, the output is formatted to be R-ready by formatting it to "c("colname1", "colname2", "colname3", ...)".</li>
+					</ol>
+					<h2>Example:</h2>
+					<div class="example">
+						<div>
+							<p class="exampleTitle">Input Text:</p>
+							<p class="inputText example"> First Name<br>Last NAME<br>"Nationality"<br>Age<br>Date_of_Birth<br>GEndER</p>
+						</div>
+						<div>
+							<p class="exampleTitle">Output Text:</p>
+							<p class="outputText example">c("firstName", "lastName", "nationality", "age", "dateOfBirth", "gender")</p>
+						</div>
+					</div>
+				</section>
+				<section class="containerFooter">
+					<h3>Has a suggestion? <a href="mailto:imari.borda2018@gmail.com">Email me</a>.</h3>
+					<h3>This tool is created by <a target="_blank" href="https://twitter.com/ijborda">@imariborda</a>. If you like it or if you find it useful, consider <a target="_blank" href="https://ko-fi.com/imarijoyborda">buying her a coffee</a>.</h3>
+				</section>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

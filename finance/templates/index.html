@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Welcome Back!
+{% endblock %}
+
+{% block main %}
+  <div>
+    <h2>Here is you stock summary, {{ name }}.</h2>
+    <p>Current Cash: {{ current_cash }}</p>
+    <p>Stock Value: {{ stock_total_value }}</p>
+    <p><b>Grand Total: {{ grand_total }}</b></p>
+  </div>
+  <div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Stocks</th>
+                <th scope="col">Number of Shares</th>
+                <th scope="col">Current Price</th>
+                <th scope="col">Total Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+              <th scope="row">{{ stock["symbol"] }}</th>
+              <td>{{ stock["number_shares"]}}</td>
+              <td>{{ stock["current_price"] }}</td>
+              <td>{{ stock["total_value"] }}</td>
+            <tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+{% endblock %}

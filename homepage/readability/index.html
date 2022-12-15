@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Readability Test</title>
+
+		<!-- Google Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+		<!-- Fontawesome Link -->
+		<script src="https://kit.fontawesome.com/41ed2c6bc1.js" crossorigin="anonymous"></script>
+
+		<!-- Mathe Equation -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<header id="Home" class="containerOutside">
+			<div class="containerNav">
+				<nav>
+					<div>
+						<a href="../index.html"><img class="logo" src="../assets/logo.png"></a>
+					</div>
+					<ul class="socials">
+						<li><a target="_blank" href="https://twitter.com/ijborda"><i class="fa-brands fa-twitter"></i></a></li>
+						<li><a target="_blank" href="https://www.linkedin.com/in/ijborda/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+						<li><a target="_blank" href="https://github.com/ijborda"><i class="fa-brands fa-github"></i></a></li>
+						<li><a target="_blank" href="mailto:imari.borda2018@gmail.com"><i class="fa-solid fa-envelope"></i></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="main">
+			<section class="readability">
+				<h1>Readability Test</h1>
+				<p id="msg" class="warn">Please enter text.</p>
+				<form>
+					<textarea id="text" placeholder="Enter text here..."></textarea>
+					<input type="submit" value="Submit Text" id="submit">
+				</form>
+				<section id="resultBox">
+					<h2>Result: </h2>
+					<span id="result"></span>
+				</section>
+				<section>
+					<i id = "moreInfo" class="fa-solid fa-circle-question"></i>
+					<section id="moreInfoContent" class="hidden">
+						<section>
+							<h3>How to interpret?</h3>
+							<p>The result approximates the U.S. grade level thought necessary to comprehend the text. The lower the grade level is, the easier the text is comprehend.</p>
+						</section>
+						<section>
+							<h3>How is it calculated?</h3>
+							<p>The test uses the Coleman&#8211;Liau index (CLI) to calculate the grade level. It uses the following formula: \(CLI = 0.0588L - 0.296S - 15.8\). \(L\) is the average number of letters per 100 words and \(S\) is the average number of sentences per 100 words.</p>
+						</section>
+						<p>More information about <a href="https://en.wikipedia.org/wiki/Coleman–Liau_index" target="_blank">Coleman&#8211;Liau index</a>.</p>
+					</section>
+				</section>
+			</section>
+		</div>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
